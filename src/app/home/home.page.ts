@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IonInfiniteScroll } from '@ionic/angular';
 import { PokemonService } from '../services/pokemon.service';
 
+
 @Component({
   selector: 'app-home',
   templateUrl: 'home.page.html',
