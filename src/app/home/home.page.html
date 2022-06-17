@@ -8,7 +8,7 @@
 
 <ion-content [fullscreen]="true" color="secondary">
   <br>
-  <ion-item color="secondary">
+  <ion-item class="profile" color="secondary">
     <ion-avatar slot="start">
       <img src="https://www.pngkey.com/png/full/56-565869_home-pin-back-buttons-pokemon-pikachu-pin-back.png">
     </ion-avatar>
@@ -16,11 +16,39 @@
       <h2 class="name"><b>Oscar Martinez</b></h2>
       <h5 class="subname">Lvl 04</h5>
     </ion-label>
+    <ion-icon class="icon" name="locate"></ion-icon>
   </ion-item>
   <br>
-  <ion-item color="secondary">
+
+    <ion-text class="title1 yellow"><b>Pokedex</b></ion-text>
+    <ion-button class="searchIcon" slots="icon-only" color="tertiary">
+      <ion-icon name="search"></ion-icon>
+    </ion-button>
+
+  <br><br><br>
+
+  <!--comentado hasta nuevo aviso-->
+  <!-- <ion-item color="secondary">
     <ion-searchbar placeholder="Pokedex" color="tertiary"></ion-searchbar>
-  </ion-item>
+  </ion-item> -->
+
+  <h3 class="title2">Near you</h3>
+  <ion-row class="title3">
+    <ion-col class="yellow">
+      <div>All</div>
+    </ion-col>
+    <ion-col>
+      <div>Pokemon</div>
+    </ion-col>
+    <ion-col>
+      <div>Trainers</div>
+    </ion-col>
+    <ion-col>
+      <div>Gym Centres</div>
+    </ion-col>
+  </ion-row>
+
+
   <br><br><br>
   <ion-slides [options]="{ slidesPerView: '1.5', zoom: false, grabCursor: true }">
     <ion-slide *ngFor="let pkmn of pokemon;" [routerLink]="pkmn.pokeIndex">
@@ -31,12 +59,15 @@
         <h1>#{{pkmn.pokeIndex}} {{pkmn.name}}</h1>
         <br>
       </ion-label>
+      <ion-button color="tertiary">
+        <b>Ver mas</b>
+      </ion-button>
     </ion-card>
     </ion-slide>
   </ion-slides>
 
-  <ion-tabs >
-    <ion-tab-bar color="primary" slot="bottom">
+  <ion-tabs  >
+    <ion-tab-bar class="botNav" color="primary" slot="bottom">
   
       <ion-tab-button >
         <ion-icon name="home"></ion-icon>

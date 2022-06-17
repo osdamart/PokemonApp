@@ -36,6 +36,11 @@ ion-card {
   transform: rotate(90deg);
 }
 
+.profile{
+  margin-top:5px;
+  padding-left: 5%;
+}
+
 .name{
   color:rgb(222, 222, 222);
 }
@@ -43,3 +48,49 @@ ion-card {
 .subname{
   color:gray;
 }
+
+.icon{
+  padding-right: 5%;
+  color:rgb(222, 222, 222);
+}
+
+.title1{
+  margin-top:10%;
+  padding: 5%;
+  margin-bottom: 200px;
+  font-size: x-large;
+}
+
+.searchIcon{
+  position: fixed;
+  top: 135px;
+  right: 5%;
+}
+
+.title2, .title3{
+  padding-left:5%;
+}
+
+.title3{
+  margin-top:15px;
+  color:gray;
+  font-size:small;
+  padding-right: 2.5%;
+}
+
+.yellow{
+  color:#fbb917;
+}
+
+.botNav{
+  padding-top: 2.5%;
+  padding-bottom: 5%;
+  padding-left: 7.5%;
+  padding-right: 7.5%;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+
+
+
