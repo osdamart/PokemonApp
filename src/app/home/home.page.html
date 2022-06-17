@@ -1,20 +1,58 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar color="tertiary">
+    <ion-title >
+      Pokemon App
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content [fullscreen]="true" color="secondary">
+  <br>
+  <ion-item color="secondary">
+    <ion-avatar slot="start">
+      <img src="https://www.pngkey.com/png/full/56-565869_home-pin-back-buttons-pokemon-pikachu-pin-back.png">
+    </ion-avatar>
+    <ion-label>
+      <h1>Oscar Martinez</h1>
+      <h5 class="subtitulo">lvl04</h5>
+    </ion-label>
+  </ion-item>
+  <br>
+  <ion-item color="secondary">
+    <ion-searchbar placeholder="Pokedex" color="tertiary"></ion-searchbar>
+  </ion-item>
+  <br><br><br>
+  <ion-slides [options]="{ slidesPerView: '1.5', zoom: false, grabCursor: true }">
+    <ion-slide *ngFor="let pkmn of pokemon;" [routerLink]="pkmn.pokeIndex">
+    <ion-card color="primary">
+      <img [src]="pkmn.image" color="primary">
+ 
+      <ion-label class="ion-text-capitalize">
+        <h1>#{{pkmn.pokeIndex}} {{pkmn.name}}</h1>
+        <br>
+      </ion-label>
+    </ion-card>
+    </ion-slide>
+  </ion-slides>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <ion-tabs >
+    <ion-tab-bar color="primary" slot="bottom">
+  
+      <ion-tab-button tab="speakers">
+        <ion-icon name="home"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button class="rotate-90" tab="map">
+        <ion-icon name="invert-mode"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+  
+      <ion-tab-button tab="about">
+        <ion-icon name="chatbox-ellipses"></ion-icon>
+        <ion-label></ion-label>
+      </ion-tab-button>
+    </ion-tab-bar>
+  </ion-tabs>
+
 </ion-content>
